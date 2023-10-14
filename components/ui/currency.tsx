@@ -9,5 +9,9 @@ export const Currency: React.FC<CurrencyProps> = ({ value }) => {
     setIsMounted(true);
   }, []);
   if (!isMounted) return null;
-  return <div className="font-bold">{formatter.format(Number(value))}</div>;
+  return (
+    <div className="font-bold dark:text-white">
+      {formatter.format(Number(value))}
+    </div>
+  );
 };

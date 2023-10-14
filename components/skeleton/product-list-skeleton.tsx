@@ -15,7 +15,7 @@ export const ProductListSkeleton = ({
           {Array.from({ length: iterate }).map((_, i) => (
             <div
               key={i}
-              className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4"
+              className="bg-white dark:bg-zinc-800 group cursor-pointer rounded-xl border p-3 space-y-4"
             >
               <Skeleton className="rounded-xl h-[225px]" />
               <div className="flex flex-col space-y-1">

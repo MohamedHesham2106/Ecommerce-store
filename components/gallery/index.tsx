@@ -19,7 +19,7 @@ export const Gallery: React.FC<GalleryProps> = ({ images = [] }) => {
       <Tab.Panels className="aspect-square w-full">
         {images.map((image) => (
           <Tab.Panel key={image.id}>
-            <div className="aspect-square relative h-full w-full sm:rounded-lg overflow-hidden">
+            <div className="aspect-square relative h-full w-full sm:rounded-lg overflow-hidden dark:bg-zinc-900">
               <Image
                 src={image.url}
                 alt="Image"

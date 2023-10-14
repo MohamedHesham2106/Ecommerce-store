@@ -14,8 +14,8 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   };
   return (
     <Dialog open={isOpen} onOpenChange={onChange}>
-      <DialogContent className="w-full max-w-3xl overflow-hidden rounded-lg text-left align-middle">
-        <div className="flex w-full items-center  px-4 pb-8 pt-14  sm:px-6 sm:pt-8 md:p-6 lg:p-8">
+      <DialogContent className="w-full max-w-3xl overflow-hidden rounded-lg text-left align-middle dark:bg-zinc-900">
+        <div className="flex w-full items-center  px-4 pb-8 pt-14  sm:px-6 sm:pt-8 md:p-6 lg:p-8 dark:bg-zinc-900">
           {children}
         </div>
       </DialogContent>

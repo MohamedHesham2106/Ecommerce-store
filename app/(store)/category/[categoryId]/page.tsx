@@ -36,7 +36,7 @@ const CategoryScreen: React.FC<CategoryPageProps> = async ({
   const category = await getCategory(params.categoryId);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-black">
       <Container>
         <Billboard data={category.billboard} billboardTitleColor="white" />
         <div className="px-4 sm:px-6 lg:px-8 pb-24">

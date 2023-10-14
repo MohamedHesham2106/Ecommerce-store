@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import { X } from "lucide-react";
-import { toast } from "react-hot-toast";
 import { IconButton } from "@/components/ui/icon-button";
 import { Currency } from "@/components/ui/currency";
 import { useCart } from "@/hooks/use-cart";
@@ -15,7 +14,7 @@ export const CartItem: React.FC<CartItemProps> = ({ data }) => {
     removeItem(data.id);
   };
   return (
-    <li className="flex py-6 border-b">
+    <li className="flex p-6 border-b dark:border-primary dark:bg-zinc-900 ">
       <div className="relative h-24 w-24 rounded-md overflow-hidden sm:h-48">
         <Image
           fill
@@ -30,11 +29,13 @@ export const CartItem: React.FC<CartItemProps> = ({ data }) => {
         </div>
         <div className="relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:pr-0">
           <div className="flex justify-between">
-            <p className="text-lg font-semibold text-black">{data.name}</p>
+            <p className="text-lg font-semibold text-black dark:text-white">
+              {data.name}
+            </p>
           </div>
           <div className="mt-1 flex text-sm">
-            <p className="text-gray-500">{data.color.name}</p>
-            <p className="text-gray-500 ml-4 border-l border-gray-200 pl-4">
+            <p className="text-gray-500 dark:text-white">{data.color.name}</p>
+            <p className="text-gray-500 ml-4 border-l border-gray-200 pl-4 dark:text-white">
               {data.size.name}
             </p>
           </div>

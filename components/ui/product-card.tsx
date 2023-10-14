@@ -31,10 +31,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
   return (
     <div
       onClick={handleClick}
-      className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4"
+      className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4 dark:bg-zinc-800"
     >
       {/* Image and Icons */}
-      <div className="aspect-square rounded-xl bg-gray-50 relative">
+      <div className="aspect-square rounded-xl bg-gray-50  relative">
         <Image
           alt="image"
           fill
@@ -45,11 +45,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
           <div className="flex gap-x-6 justify-center">
             <IconButton
               onClick={onPreview}
-              icon={<Expand size={20} className="text-gray-600" />}
+              icon={<Expand size={20} className="text-gray-600 dark:text-primary" />}
             />
             <IconButton
               onClick={onAddToCart}
-              icon={<ShoppingCart size={20} className="text-gray-600" />}
+              icon={<ShoppingCart size={20} className="text-gray-600 dark:text-primary" />}
             />
           </div>
         </div>
@@ -57,7 +57,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
       {/* Description */}
       <div>
         <p className="font-semibold text-lg">{data.name}</p>
-        <p className="text-sm text-gray-500">{data?.category?.name}</p>
+        <p className="text-sm text-gray-500 dark:text-primary">{data?.category?.name}</p>
       </div>
       {/* Price */}
       <div className="flex items-center justify-between">

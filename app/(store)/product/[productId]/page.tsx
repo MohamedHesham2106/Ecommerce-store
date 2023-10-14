@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/container";
 import { Info } from "@/components/info";
 import getProduct from "@/services/get-product";
 import getProducts from "@/services/get-products";
+import { Separator } from "@/components/ui/separator";
 interface ProductPageProps {
   params: {
     productId: string;
@@ -21,7 +22,7 @@ const ProductScreen: React.FC<ProductPageProps> = async ({ params }) => {
   }
 
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-black">
       <Container>
         <div className="px-4 py-10 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
@@ -30,7 +31,7 @@ const ProductScreen: React.FC<ProductPageProps> = async ({ params }) => {
               <Info data={product} />
             </div>
           </div>
-          <hr className="my-10" />
+          <Separator className="my-10" />
           <ProductList title="Related Items" items={suggestedProducts} />
         </div>
       </Container>
